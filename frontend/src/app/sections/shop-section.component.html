@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="section__header">
+    <h1>Магазин косметики</h1>
+    <p>Профессиональные средства для домашнего и кабинетного ухода.</p>
+  </div>
+  <div class="products">
+    <article class="product" *ngFor="let product of products()">
+      <h2>{{ product.title }}</h2>
+      <p>{{ product.description }}</p>
+      <div class="product__price">{{ product.price }}</div>
+      <button type="button">В корзину</button>
+    </article>
+  </div>
+</section>

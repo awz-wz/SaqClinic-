@@ -1,0 +1,16 @@
+<section class="section section--accent">
+  <div class="section__header">
+    <h1>Обучение на косметолога</h1>
+    <p>Практические программы для тех, кто хочет начать карьеру или повысить квалификацию.</p>
+  </div>
+  <div class="timeline">
+    <article class="timeline__item" *ngFor="let course of trainingPrograms()">
+      <div class="timeline__badge">{{ course.duration }}</div>
+      <div class="timeline__body">
+        <h2>{{ course.title }}</h2>
+        <p>{{ course.description }}</p>
+        <a href="#" class="timeline__link">Скачать программу</a>
+      </div>
+    </article>
+  </div>
+</section>

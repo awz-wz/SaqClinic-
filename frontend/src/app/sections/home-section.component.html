@@ -1,0 +1,32 @@
+<section class="hero" *ngIf="clinicInfo() as info">
+  <div class="hero__content">
+    <h1>{{ info.name }}</h1>
+    <p class="hero__tagline">{{ info.tagline }}</p>
+    <div class="hero__cta">
+      <a routerLink="/services" class="btn btn--primary">Косметологические услуги</a>
+      <a routerLink="/training" class="btn btn--ghost">Обучение</a>
+    </div>
+  </div>
+  <div class="hero__card">
+    <h2>Как с нами связаться?</h2>
+    <ul>
+      <li><strong>Телефон:</strong> {{ info.phone }}</li>
+      <li><strong>Email:</strong> {{ info.email }}</li>
+      <li><strong>Адрес:</strong> {{ info.address }}</li>
+    </ul>
+  </div>
+</section>
+<section class="highlights">
+  <div class="highlight">
+    <h3>Экспертная команда</h3>
+    <p>Врачи-косметологи с медицинским образованием и международными сертификатами.</p>
+  </div>
+  <div class="highlight">
+    <h3>Современное оборудование</h3>
+    <p>Используем лазерные и аппаратные технологии премиум-класса.</p>
+  </div>
+  <div class="highlight">
+    <h3>Профессиональная косметика</h3>
+    <p>Подбор уходов и средств на базе собственного магазина.</p>
+  </div>
+</section>
