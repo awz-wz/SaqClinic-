@@ -1,0 +1,73 @@
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 42rem;
+      margin: 0 auto;
+      color: #f0e8ff;
+      line-height: 1.7;
+    }
+  }
+
+  &--accent {
+    background: linear-gradient(135deg, #7758ff, #9f6bff);
+    border-radius: 2rem;
+    color: #fff;
+  }
+}
+
+.timeline {
+  display: grid;
+  gap: 1.5rem;
+
+  &__item {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: auto 1fr;
+      align-items: center;
+    }
+  }
+
+  &__badge {
+    background: rgba(255, 255, 255, 0.22);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__body {
+    h2 {
+      margin-bottom: 0.75rem;
+      font-size: 1.35rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  &__link {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}

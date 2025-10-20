@@ -1,0 +1,13 @@
+<section class="section">
+  <div class="section__header">
+    <h1>Косметологические услуги</h1>
+    <p>Аппаратные и инъекционные методики, составленные индивидуально под задачи вашей кожи.</p>
+  </div>
+  <div class="grid">
+    <article class="card" *ngFor="let service of services()">
+      <h2>{{ service.title }}</h2>
+      <p>{{ service.description }}</p>
+      <button type="button">Подробнее</button>
+    </article>
+  </div>
+</section>

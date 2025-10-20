@@ -1,0 +1,38 @@
+<header class="header" [ngClass]="{ 'header--open': menuOpen() }">
+  <div class="header__inner">
+    <a class="header__logo" routerLink="/" (click)="closeMenu()">
+      <span class="header__logo-mark">Saq</span>
+      <span class="header__logo-text">Clinic</span>
+    </a>
+    <button class="header__burger" type="button" (click)="toggleMenu()" aria-label="Меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="header__nav" [ngClass]="{ 'header__nav--visible': menuOpen() }">
+      <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Услуги</a>
+      <a routerLink="/training" routerLinkActive="active" (click)="closeMenu()">Обучение</a>
+      <a routerLink="/shop" routerLinkActive="active" (click)="closeMenu()">Магазин</a>
+      <a class="header__cta" routerLink="/" (click)="closeMenu()">Записаться</a>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <router-outlet></router-outlet>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <strong>Saq Clinic</strong>
+      <p>Премиальный центр косметологии и обучения.</p>
+    </div>
+    <div>
+      <p>+7 (700) 123-45-67</p>
+      <p>info@saqclinic.kz</p>
+    </div>
+    <div>
+      <p>г. Алматы, пр. Абая 123</p>
+      <p>Ежедневно 09:00 — 21:00</p>
+    </div>
+  </div>
+</footer>
